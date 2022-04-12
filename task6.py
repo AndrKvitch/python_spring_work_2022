@@ -2,9 +2,5 @@
 # Примечание: коэффициенты воздействия через функцию input().
 a = float(input())
 b = float(input())
-x = float(input())
-
-if a * x + b == 0 and a != 0:
-    print(0)
-else:
-    print('Решение не верно')
+x=(-b) / a
+print(x)
