@@ -7,7 +7,13 @@ a = int(input())
 b = int(input())
 print(a + b)
 print(a - b)
-print(b - a)
-print(a / b)
+if b !=0:
+    print(a / b)
+else:
+    print("на 0 делить нельзя")
 print(a * b)
-print(a % b)
+if b !=0:
+    print(a % b)
+    print(a//b)
+else:
+    print("На 0 делить нельзя")
