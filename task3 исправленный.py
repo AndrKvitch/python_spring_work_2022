@@ -14,6 +14,9 @@ else:
 print(a * b)
 if b !=0:
     print(a % b)
-    print(a//b)
+else:
+    print("На 0 делить нельзя")
+if b != 0:
+    print(a // b)
 else:
     print("На 0 делить нельзя")

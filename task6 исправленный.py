@@ -4,7 +4,7 @@ a = float(input())
 b = float(input())
 if a != 0:
     x=(-b) / a
-    print(a * x + b)
+    print(x)
 else:
     print("Условие задано неверно")
 
