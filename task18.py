@@ -12,69 +12,8 @@
 print("Введите сумму")
 a = int(input())
 t = []
-if a == 2:
-    for i in range(1, 7):
-        for j in range(1, 7):
-            if i + j == 2:
-                t.append((i, j))
-    print("Cумма 2 комбинация", t)
-if a == 3:
-    for i in range(1, 7):
-        for j in range(1, 7):
-            if i + j == 3:
-                t.append((i, j))
-    print("Cумма", a, "комбинация", t)
-if a == 4:
-    for i in range(1, 7):
-        for j in range(1, 7):
-            if i + j == 4:
-                t.append((i, j))
-    print("Cумма", a, "комбинация", t)
-if a == 5:
-    for i in range(1, 7):
-        for j in range(1, 7):
-            if i + j == 6:
-                t.append((i, j))
-    print("Cумма", a, "комбинация", t)
-if a == 6:
-    for i in range(1, 7):
-        for j in range(1, 7):
-            if i + j == 6:
-                t.append((i, j))
-    print("Cумма", a, "комбинация", t)
-if a == 7:
-    for i in range(1, 7):
-        for j in range(1, 7):
-            if i + j == 7:
-                t.append((i, j))
-    print("Cумма", a, "комбинация", t)
-if a == 8:
-    for i in range(1, 7):
-        for j in range(1, 7):
-            if i + j == 8:
-                t.append((i, j))
-    print("Cумма", a, "комбинация", t)
-if a == 9:
-    for i in range(1, 7):
-        for j in range(1, 7):
-            if i + j == 9:
-                t.append((i, j))
-    print("Cумма", a, "комбинация", t)
-if a == 10:
-    for i in range(1, 7):
-        for j in range(1, 7):
-            if i + j == 10:
-                t.append((i, j))
-    print("Cумма", a, "комбинация", t)
-if a == 11:
-    for i in range(1, 7):
-        for j in range(1, 7):
-            if i + j == 11:
-                t.append((i, j))
-    print("Cумма", a, "комбинация", t)
-if a == 12:
-    for i in range(1, 7):
-        for j in range(1, 7):
-            if i + j == 12:
-                t.append((i, j))
-    print("Cумма", a, "комбинация", t)
+for i in range(1, 7):
+    for j in range(1, 7):
+        if i + j == a:
+            t.append((i, j))
+print("Cумма", a, "комбинация", t)
