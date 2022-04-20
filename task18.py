@@ -9,34 +9,72 @@
 #Выводы комбинаций оформить в список кортежей.
 
 
-print("Введите сумму :")
+print("Введите сумму")
 a = int(input())
-
-def game(a):
-
-    if a == 2:
-        return("Cумма 2, комбинация [(1,1)]")
-    elif a == 3:
-        return("Сумма 3, комбинация [(1,2), (2,1)]")
-    elif a == 4:
-        return("Сумма 4, комбинация [(1,3), (3,1), (2,2)]")
-    elif a == 5:
-        return("Сумма 5, комбинация [(2,3), (3,2), (1,4), (4,1)]")
-    elif a == 6:
-        return("Сумма 6, комбинация [(2,4), (4,2), (1,5), (5,1), (3,3)]")
-    elif a == 7:
-        return("Сумма 7, комбинация [(1,6), (6,1), (2,5), (5,2), (3,4), (4,3)]")
-    elif a == 7:
-        return("Сумма 7, комбинация [(1,6), (6,1), (2,5), (5,2), (3,4), (4,3)]")
-    elif a == 8:
-        return("Сумма 8, комбинация [(2,6), (6,2), (3,5), (5,3), (4,4)]")
-    elif a == 9:
-        return("Сумма 9, комбинация [(3,6), (6,3), (4,5), (5,4)]")
-    elif a == 10:
-        return("Сумма 10, комбинация [(4,6), (6,4), (5,5)]")
-    elif a == 11:
-        return("Сумма 11, комбинация [(5,6), (6,5)]")
-    elif a == 12:
-        return ("Сумма 12, комбинация [(6,6)]")
-print(game(a))
-
+t = []
+if a == 2:
+    for i in range(1, 7):
+        for j in range(1, 7):
+            if i + j == 2:
+                t.append((i, j))
+    print("Cумма 2 комбинация", t)
+if a == 3:
+    for i in range(1, 7):
+        for j in range(1, 7):
+            if i + j == 3:
+                t.append((i, j))
+    print("Cумма 3 комбинация", t)
+if a == 4:
+    for i in range(1, 7):
+        for j in range(1, 7):
+            if i + j == 4:
+                t.append((i, j))
+    print("Cумма 4 комбинация", t)
+if a == 5:
+    for i in range(1, 7):
+        for j in range(1, 7):
+            if i + j == 6:
+                t.append((i, j))
+    print("Cумма 5 комбинация", t)
+if a == 6:
+    for i in range(1, 7):
+        for j in range(1, 7):
+            if i + j == 6:
+                t.append((i, j))
+    print("Cумма 6 комбинация", t)
+if a == 7:
+    for i in range(1, 7):
+        for j in range(1, 7):
+            if i + j == 7:
+                t.append((i, j))
+    print("Cумма 7 комбинация", t)
+if a == 8:
+    for i in range(1, 7):
+        for j in range(1, 7):
+            if i + j == 8:
+                t.append((i, j))
+    print("Cумма 8 комбинация", t)
+if a == 9:
+    for i in range(1, 7):
+        for j in range(1, 7):
+            if i + j == 9:
+                t.append((i, j))
+    print("Cумма 9 комбинация", t)
+if a == 10:
+    for i in range(1, 7):
+        for j in range(1, 7):
+            if i + j == 10:
+                t.append((i, j))
+    print("Cумма 10 комбинация", t)
+if a == 11:
+    for i in range(1, 7):
+        for j in range(1, 7):
+            if i + j == 11:
+                t.append((i, j))
+    print("Cумма 11 комбинация", t)
+if a == 12:
+    for i in range(1, 7):
+        for j in range(1, 7):
+            if i + j == 12:
+                t.append((i, j))
+    print("Cумма 12 комбинация", t)
