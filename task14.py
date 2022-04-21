@@ -10,29 +10,24 @@
 
 
 mass = [1,2,1,7,16,30,51,2,70,3,2]
-
-for i in mass:
-    if mass.count(i) > 1:
-        x = i
-y = []
-z = []
-
-if x in mass:
-    counter = 0
-    start = 0
-    if mass.count(x) == 1:
-        print("В массиве одно значение, под индексом :", x)
-    else:
-        while counter < mass.count(x):
-            start = mass.index(x, start, len(mass)) +1
-            counter += 1
-            y.append(start - 1)
-else:
-    print("No massive")
-
-for j in range(0, len(y)-1):
-    z.append(y[j + 1] - y[j])
-
-for j in range(0, len(y) - 1):
-    if y[j + 1] - y[j] == min(z):
-        print("Для числа", i, "индексы двух ближайших чисел:", y[j], "и", y[i])
+nums = []
+for i in range(len(mass)):
+    ind = []
+    num = mass[i]
+    counter = mass.count(num)
+    if counter > 1 and num not in nums:
+        nums.append(num)
+for n in nums:
+    ind = []
+    ind1 = mass.index(n)
+    ind.append(ind1)
+    for j in range(mass.count(n) - 1):
+        ind1 = mass.index(n, ind1 + 1)
+        ind.append(ind1)
+    result_razn = -123456789
+    result_index = []
+    for x in range(len(ind) - 1):
+        if ind[x] - ind[x + 1] > result_razn:
+            result_razn = ind[x] - ind[x + 1]
+            result_index = [ind[x], ind[x + 1]]
+    print("Для числа", n, "индексы двух ближайших чисел", result_index)
