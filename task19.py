@@ -11,7 +11,6 @@ for i in algoritm:
     if i in algoritm:
         count += 1
     f.write(str(count))
-    f.write(" ")
     f.write(i)
     f.write("\n")
 f.close()
