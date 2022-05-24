@@ -1,11 +1,11 @@
 
 
-####Выложил исправленную задачу task32 и task17
-#### В ЗАДАЧЕ ОСТАЛОСЬ ДОДЕЛАТЬ ХЭШИРОВАНИЕ ПАРОЛЯ. В ДАННЫЙ МОМЕНТ ПОКА НЕ ГОТОВО
+####
+#### На гит добавлены еще 17, 24, 25 задачи
 ####
 
 import psycopg2
-
+import bcrypt
 #Создаем тестовую таблицу в БД и вносим туда 1 пользователья
 connect = psycopg2.connect(dbname="testsystem2", user="test", password = "123", host = "localhost", port = "5432")
 connect.autocommit = True
@@ -47,6 +47,8 @@ elif parameter_selection == 2:
     new_patronymic = str(input("Укажеите ваше отчество: "))
     new_phone_number = int(input("Укажите ваш номер телефона: "))
     new_group = str(input("Укажите вашу группу: "))
+    hashandsalt = bcrypt.hashpw(new_password.encode(), bcrypt.gensalt())
+    hashandsalt = hashandsalt.decode('utf-8')
     with connect.cursor() as cur:
         cur.execute("SELECT * FROM testing12 WHERE login = %s AND password = %s", [new_login, new_password])
         if cur.rowcount:
@@ -54,5 +56,5 @@ elif parameter_selection == 2:
         else:
             cur.execute(
         "INSERT INTO testing2(login, password, name, surname, patronymic, phone_number, grp) VALUES (%s, %s, %s, %s, %s, %s, %s)",
-            [new_login, new_password, new_name, new_surname, new_patronymic, new_phone_number, new_group])
+            [new_login, hashandsalt, new_name, new_surname, new_patronymic, new_phone_number, new_group])
         print("Добро пожаловать, ", new_name, new_surname, ".Выберите номер теста", sep=" ")

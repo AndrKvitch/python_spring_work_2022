@@ -8,9 +8,12 @@ prices = {
     "pear": 3
 }
 
-def compute_bill(food):
+def compute_bill(prices):
+    check = dict()
     total = 0
-    for item in food:
-        total += food[item]
+    for key in prices:
+        print(key)
+        check[key] = float(input("Введите колличество товара: ")) * prices[key]
+        total += check[key]
     return total
 print(compute_bill(prices))
